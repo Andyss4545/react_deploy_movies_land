@@ -1,38 +1,678 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Nav bar component styling */
+
+.wrapper {
+  margin-top: -1em;
+  background: #144184 url(../src/Assets/header-bg.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 240px;
+  background-position-x: 65%;
+  background-position-y:0px;
+  position: absolute; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+   margin: 0 4em 0 4em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: space-between; */
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper header .logo {
+        font-size: 1.5em;
+        margin-top: .3em;
+}
+.wrapper header .logo p {
+      color: goldenrod;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper header .logo span{
+     color: aliceblue;
 }
+
+.wrapper .menu{
+       margin-top: 2.3em;
+       display: none;
+}
+
+header nav {
+     margin: 1.2em 0 0 6em;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    font-size: 1.1em;
+    padding-left: 1.3em;
+    padding-right: 1em;
+}
+
+header nav ul li a{
+   text-decoration: none;
+   color: #ffff;
+}
+
+header nav ul li a:hover{
+     color:aliceblue;
+     transition: .3s;
+}
+
+ header .login{
+     margin: 2.5em 0 0 15em;
+}
+
+header .login a{
+    color: #000;
+    background: white;
+    padding: .5em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .login a:hover{
+  background-color: #b9b9b9;
+}
+
+header .login i{
+    padding-right: .6em;
+} 
+
+.wrapper .hero{
+     text-align: center;
+     margin-top: 2em;
+     margin-left: 2em;
+     font-size: 1.5em;
+     color: aliceblue;
+}
+
+.formbox{
+    padding-top: 11.2rem;
+    text-align: center;
+}
+
+.formbox input{
+      padding: .8em 10em;
+      border-radius: 40px;
+      position: relative;
+      background: #fff;
+      color: #cfcfcf;
+      border: none;
+      font-size: 1.8em;
+      font-weight: 200;
+      box-shadow: 0 20px 20px
+}
+
+.formbox input{
+    outline: none;
+}
+
+.formbox input::placeholder{
+    text-align: left;
+    font-size: .8em;
+    padding-left: 0;
+}
+
+.formbox button{
+      background: #3e8afa;
+      border-radius: 50%;
+      height: 75px;
+      width: 75px;
+      border: none;
+      z-index: 999;
+      position: absolute;
+      cursor: pointer;
+}
+
+.formbox button:hover{
+      background: #144184;
+}
+
+.formbox button i{
+    color: white;
+    font-size: 25px;
+}
+
+/*Container items for films */
+
+.empty {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty h2 {
+    font-size: 1.25rem;
+    color: #c42424;
+}
+
+.socials{
+    margin-top: 1em;
+    text-align: center;
+    font-size: 32px;
+}
+
+.socials .fa-brands{
+       padding-left: 5px;
+       padding-right: 5px;
+       cursor: pointer;
+}
+
+.socials .fa-facebook{
+     color: rgb(59, 89, 152); 
+}
+
+.fa-facebook:hover{
+    color: rgb(31, 82, 190); 
+}
+
+.socials .fa-twitter{
+    color: rgb(29, 161, 242); 
+}
+
+.socials .fa-twitter:hover{
+    color: rgb(4, 154, 247); 
+}
+
+.socials .fa-youtube{
+    color: rgb(255, 0, 0); 
+}
+
+.socials .fa-youtube:hover{
+    color: rgb(187, 9, 9); 
+}
+
+.socials .fa-instagram{
+    color: rgb(138, 58, 185); 
+}
+
+.socials .fa-instagram:hover{
+    color: rgb(155, 26, 230); 
+}
+
+.socials .fa-telegram{
+    color: rgb(59, 139, 204); 
+}
+
+.socials .fa-telegram:hover{
+    color: rgb(23, 131, 219);
+}
+
+.socials .fa-evenlope{
+    color: rgb(132, 132, 132); 
+}
+
+.socials .fa-envelope:hover{
+    color: rgb(126, 115, 115); 
+}
+
+.container{
+       padding-top: 4em;
+       display: flex;
+       justify-content: center; 
+       align-items: center;
+       flex-wrap: wrap;
+       width: 100%;
+       text-align: center;
+}
+
+.container .film{
+        padding-bottom: 1.2em;
+        width: 310px;
+        height: 460px;
+        overflow: hidden;
+        border: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+        box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+       
+}
+
+.container .film:hover{
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+     transform: scale(1.05, 1.05);
+}
+
+.container .film .filmposter img{
+       height: 330px;
+       width: 68%;
+       border-radius: 10px;
+       /* position: absolute; */
+}
+
+.container .filmposter  img:hover{
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    background: rgba(22,22,22,.5);
+    z-index: 1;
+    
+}
+
+.container .film  .filmyear:hover img:hover{
+    opacity: 1;
+} 
+ .container .film .filmdetails .filmyear{
+    position: relative;
+    bottom: 300px;
+    right: 70px;
+    z-index: 999;
+    color: white;
+    font-size: 17px;
+    opacity: 0;
+} 
+
+.container .film .filmdetails .filmyear:hover{
+    color: white;
+    font-size: 17px;
+    opacity: 1;
+} 
+
+.film .filmdetails .details{
+    margin-top: -1em;
+     margin-left: 3.6em;
+     width: 68%;
+}
+
+.film .filmdetails .details .filmname{
+      text-align: left;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20px;
+}
+
+.film .filmdetails .details .yearinfo{
+     margin-top: .3em;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 1em;
+}
+
+.film .details .yearinfo .filmyear2{
+    font-size: 1.1em;
+    line-height: 1em;
+    padding: 2px 4px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.film .details .yearinfo .filminfo{
+        font-size: 1.1em;
+        line-height: 1em;
+        padding: 2px 4px;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+}
+
+/* footer contents */
+
+footer {
+      margin-top: 2rem;
+      background-color: #000;
+      height: 180px;
+      color: #b9b9b9;
+      display: flex;
+      justify-content: space-between;
+      justify-items: center;
+      /* flex-wrap: wrap; */
+      padding-right: 3rem;
+}
+
+footer .logo{
+    font-size: 1.5em;
+    margin-top: 1em;
+    color: goldenrod;
+    width: 50%;
+    margin-left: 3rem;
+}
+
+footer .logo span{
+ color: aliceblue;
+}
+
+footer .content{
+       margin-top: 3rem;
+}
+
+footer .content .about{
+    width: 80%;
+    font-size: 12px;
+}
+
+footer .content ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 70%;
+      margin-left: -2em;
+}
+
+.footer .content ul li{
+     list-style: none;
+     font-size: 12px;
+}
+footer .info{
+    margin-top: 3em;
+    width: 40%;
+    font-size: 12px;
+    border: #b9b9b9 solid 1px ;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    margin-bottom: 3em;
+    padding-left: .5rem;
+}
+
+/* Tablets and mobile screens */
+
+@media screen  and (max-width: 1319px){
+    header {
+        justify-content: space-between;
+        margin: 0; 
+    }
+
+    .wrapper header .logo p {
+        color: goldenrod;
+        margin: 1em ;
+    }
+
+    header .login {
+        margin-right: 1em;
+    }
+}
+
+@media screen  and (max-width: 1255px){
+    header {
+        display: flex;
+        margin-top: 0em; 
+    }
+
+    .wrapper header .logo p {
+        margin: 1em 0 0 1em ;
+    }
+
+    .wrapper header .hero{
+         margin-left: 2.5em;
+    }
+
+    header .login {
+        margin-right: 4em;
+        margin-left: 0;
+    }
+
+
+    header nav ul {
+        margin-left: -6em;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .wrapper header nav {
+        margin-top: -.5rem;
+        z-index: 999;
+        height: 100vh;
+        position: fixed;
+        background: #111;
+        width: 500px;
+        left: -400px;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+        display: none;
+    }
+
+    .wrapper header nav ul{
+         margin-top: 4rem;
+         display: block;
+         margin-left: 13rem;
+         margin-right: 1rem;
+    }
+    .wrapper header nav ul li {
+        display: block;
+        padding-top: .2em;
+        padding-bottom: 1em;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;;
+    }  
+
+    .wrapper header .menu{
+          display: block;
+          margin-left: 1em;
+    }
+
+    .wrapper header .menu i{
+          font-size: 1.5rem;
+          color: white;
+    }
+    .wrapper header .logo  {
+          text-align: center;
+          margin-left: 2em;
+    }
+
+    .wrapper header .login{
+          margin-right: 1em;
+    }
+
+    .wrapper .hero{
+        text-align: center;
+        margin-top: 2em;
+        letter-spacing: 2px;
+   }
+
+    .formbox{
+        padding-top: 9rem;
+        text-align: center;
+    }
+
+    .formbox input {
+        padding: .4em 8em;
+        border-radius: 20px;
+        box-shadow: none;
+    }
+
+    .formbox button {
+        background: #3e8afa;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    footer {
+        height: 200px;
+       
+  }
+    footer .info{
+        margin-top: 3em;
+        width: 70%;
+        margin-bottom: 3em;
+        padding-left: 1rem;
+        
+    }
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formbox {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+
+    .formbox input {
+        box-shadow: none;
+        padding-top: .5em;
+        padding-left: 1em;
+        padding-bottom: .5em;
+    }
+   
+}
+
+@media screen and (max-width: 1014) {
+    .container{
+        justify-content: center;
+        align-items: center;
+ }
+    .formbox{
+        margin: 0 2em 0 2em ;
+    }
+    .formbox input{
+        box-shadow: none;
+        padding: .4em -4em ;
+  }
+
+}
+
+@media screen and (max-width: 772px){
+  
+  footer .logo{
+      font-size: 1.5em;
+      margin-top: 1em;
+      color: goldenrod;
+      width: 100%;
+      margin-left: 5px;
+  }
+  
+  footer .logo span{
+   color: aliceblue;
+  }
+  
+  footer .content{
+         margin-top: 3rem;
+         margin-left: 10px;
+  }
+  
+  footer .content .about{
+      width: 80%;
+      font-size: 12px;
+
+  }
+
+  footer .info{
+    margin-top: 3em;
+    width: 135%;
+    
+    margin-bottom: 6em;
+    padding-left: 1rem;
+}
+
+  
+  
+    footer {
+        height: 240px;
+    }
+
+    footer .content ul{
+         display: none;
+    }
+    .wrapper header .logo {
+        margin-right: 13em;
+    }
+
+    .wrapper header .login{
+         display: none;
+    }
+
+    .formbox input{
+        padding: .4em 3em;  
+    }
+}
+
+@media screen and (max-width: 674px){
+
+    footer .info{
+        margin-top: 3em;
+        width: 135%;
+        
+        margin-bottom: 6em;
+        padding-left: 1rem;
+    }
+    .wrapper header .logo {
+        margin-right: 10em;
+    } 
+    .container{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+    }
+
+    .formbox input{
+        padding-right: .5em;
+    }
+}
+
+@media screen and (max-width: 608px){
+
+    .wrapper header .logo {
+        margin-right: 10em;
+    } 
+
+    .formbox input{
+        padding-left: .4rem;
+    }
+}
+
+@media screen and (max-width: 536px){
+
+    footer .info{
+        margin-top: 3em;
+        width: 135%;
+        margin-bottom: 2em;
+        padding-left: 1rem;
+        
+    }
+}
+
+
+@media screen and (max-width: 494px){
+
+    footer .info{
+        margin-top: 3em;
+        width: 140%;
+        margin-bottom: 1em;
+        padding-bottom: 3rem;
+
+        
+    }
+    .wrapper .hero {
+        display: none;
+    }
+
+    .wrapper header .logo {
+        margin-right: 10rem;
+    }
+
+   
+    .socials{
+        padding-top: 2em;
+    }
+
+    .formwrapper .formbox{
+       padding-top: 7rem;
+    }
+    .formwrapper .formbox input {
+        margin-left: -3rem;
+        padding: .2rem .2rem;
+    } 
+
+    .formwrapper .formbox button{
+          height: 45px;
+          width: 45px;
+    }
+}
+
+
+
