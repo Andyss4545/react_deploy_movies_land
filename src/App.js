@@ -28,7 +28,7 @@ let [state, seState] = useState({
        erroMessage: ""
 })
 
-let {movies, erroMessage} = state
+let {movies} = state
 
 
 let searchMovies = async(title) => {
@@ -47,9 +47,12 @@ let searchMovies = async(title) => {
   }
 }
 
+
 useEffect(() => {
 
       searchMovies('Batman')
+
+      //eslint-disable-next-line
 },[])
 
   return (
@@ -72,12 +75,12 @@ useEffect(() => {
      </div>
 
      <div className="socials">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-telegram"></i>
-        <i class="fa-solid fa-envelope"></i>
+        <i className="fa-brands fa-facebook"></i>
+        <i className="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-youtube"></i>
+        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-telegram"></i>
+        <i className="fa-solid fa-envelope"></i>
       </div>
 
        {
@@ -86,7 +89,7 @@ useEffect(() => {
                { movies.map((movie) => {
                   return (
                
-                      <MovieCard movies={movie}/>
+                      < MovieCard movies={movie}/>
                   )
                   })
                }

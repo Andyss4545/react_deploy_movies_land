@@ -4,7 +4,7 @@ import "../../../src/App.css";
 let MovieCard = ({ movies }) => {
   return (
     <React.Fragment>
-      <div className="film">
+      <div key={movies.Year} className="film">
         <div className="filmposter">
           <img
             src={
