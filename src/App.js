@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
+// import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Navbar from './Components/NavBar/Navbar';
 import MovieCard from './Components/MovieCard/MovieCard';
 import Footer from './Components/Footer/Footer';
@@ -8,6 +9,13 @@ import Footer from './Components/Footer/Footer';
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=1087df30'
 
 let  App = () => {
+
+  // <BrowserRouter>
+  //     <Routes>
+  //           <Route path='/' element={<App/>} />
+  //     </Routes>
+  // </BrowserRouter>
+     
    const [query, setQuery] = useState({
           text: ""
    })
@@ -74,7 +82,7 @@ useEffect(() => {
         </div>
      </div>
 
-     <div className="socials">
+     <div className="socials"> 
         <i className="fa-brands fa-facebook"></i>
         <i className="fa-brands fa-twitter"></i>
         <i className="fa-brands fa-youtube"></i>

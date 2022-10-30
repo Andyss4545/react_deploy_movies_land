@@ -1,4 +1,5 @@
 import React from "react";
+// import {useNavigate} from 'react-router-dom'
 
 let Navbar = () => {
   return (
@@ -17,19 +18,19 @@ let Navbar = () => {
           <nav>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#">Country</a>
+                <a href="/">Country</a>
               </li>
               <li>
-                <a href="#">Movies</a>
+                <a href="/">Movies</a>
               </li>
               <li>
-                <a href="#">Tv Shows</a>
+                <a href="/">Tv Shows</a>
               </li>
               <li>
-                <a href="#">Top IMDB</a>
+                <a href="/">Top IMDB</a>
               </li>
             </ul>
           </nav>
