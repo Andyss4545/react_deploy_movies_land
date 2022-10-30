@@ -6,7 +6,7 @@ import MovieCard from './Components/MovieCard/MovieCard';
 import Footer from './Components/Footer/Footer';
 
 
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=1087df30'
+const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=1087df30'
 
 let  App = () => {
 
