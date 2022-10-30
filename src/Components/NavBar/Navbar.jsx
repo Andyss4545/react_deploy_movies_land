@@ -36,7 +36,7 @@ let Navbar = () => {
           </nav>
 
           <div className="login">
-            <a href="#">
+            <a href="/">
               <i className="fa-regular fa-user"></i>Login
             </a>
           </div>
