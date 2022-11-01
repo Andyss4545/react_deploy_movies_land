@@ -4,17 +4,14 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './Components/NavBar/Navbar';
 import MovieCard from './Components/MovieCard/MovieCard';
 import Footer from './Components/Footer/Footer';
+import Banner from '../src/Assets/banner.png'
+
 
 
 const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=1087df30'
 
 let  App = () => {
 
-  // <BrowserRouter>
-  //     <Routes>
-  //           <Route path='/' element={<App/>} />
-  //     </Routes>
-  // </BrowserRouter>
      
    const [query, setQuery] = useState({
           text: ""
@@ -90,6 +87,12 @@ useEffect(() => {
         <i className="fa-brands fa-telegram"></i>
         <i className="fa-solid fa-envelope"></i>
       </div>
+
+      <div className='banner'>
+            <img src={Banner} alt="Banner"/>
+      </div>
+
+
 
        {
            movies?.length > 0 ? (

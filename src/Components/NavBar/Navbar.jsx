@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 // import {useNavigate} from 'react-router-dom'
 
 let Navbar = () => {
+  let [isActive, setIsActive] = useState({
+    navOpen: false,
+  });
+
+  let { navOpen } = isActive;
+
+  let handleClick = () => {
+    setIsActive(() => ({
+      navOpen: true,
+    }));
+  };
+
   return (
     <React.Fragment>
       <div className="wrapper">
         <header>
-          <div className="menu">
-            <i className="fa-solid fa-bars"></i>
+          <div className="bar">
+            <i onClick={handleClick} className="fa-solid fa-bars"></i>
           </div>
           <div className="logo">
             <p>
@@ -15,8 +27,11 @@ let Navbar = () => {
             </p>
           </div>
 
-          <nav>
+          <nav className={navOpen ? "menu expanded" : "menu"}>
             <ul>
+              <div className="close">
+                <i className="fa-solid fa-xmark"></i>
+              </div>
               <li>
                 <a href="/">Home</a>
               </li>
